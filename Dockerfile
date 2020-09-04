@@ -10,5 +10,7 @@ MAINTAINER syun@live.cn
 LABEL info="golang-1.15, webServer, usage:http://{ip}:8080?env={envName}"
 
 COPY --from=build /go/src/webServer /
+# set timezone
+ADD Shanghai /etc/localtime
 
 CMD ["/webServer"]
