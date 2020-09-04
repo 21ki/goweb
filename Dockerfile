@@ -1,4 +1,4 @@
-FROM golang:1.12.9-alpine AS build
+FROM golang:1.15-alpine AS build
 
 WORKDIR /go/src
 ADD webServer.go .
